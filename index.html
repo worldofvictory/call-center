@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CallMe</title>
+    <!-- Підключення бібліотеки прапорів -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/7.2.3/css/flag-icons.css"
+    />
+
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./reset.css" />
+    <!-- Підключаємо бібліотеку для прапорів -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.css"
+      integrity="sha512-gA2Bvu0/hw4oj0Lp8ZHjK+o3S4BE5m8d/wNVy6ktKLhHKPpWLQwv9ixzuWirWOakoJqlBdePq2NhoCaUOQ5npQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="call-center-status">
+      <h1 class="title">Упс, ми зачинені!</h1>
+      <p class="call">Ми перетелефонуємо вам у зазначений час</p>
+
+      <div class="phone-container">
+        <label for="phone" class="phone-label">Ваш номер:</label>
+
+        <!-- Обгортаємо вибір країни та поле вводу номера в один блок -->
+        <div class="phone-input-wrapper">
+          <!-- Вибір країни в одному полі -->
+          <div class="country-wrapper">
+            <select id="country" class="country-select">
+              <!-- Україна -->
+              <option value="+380" class="country-option">
+                <span class="flag-icon flag-icon-ua"></span>
+              </option>
+              <!-- Італія -->
+              <option value="+39" class="country-option">
+                <span class="flag-icon flag-icon-it"></span>
+              </option>
+              <!-- США -->
+              <option value="+1" class="country-option">
+                <span class="flag-icon flag-icon-us"></span>
+              </option>
+              <!-- Велика Британія -->
+              <option value="+44" class="country-option">
+                <span class="flag-icon flag-icon-gb"></span>
+              </option>
+            </select>
+          </div>
+
+          <!-- Поле для вводу номеру -->
+          <input
+            type="text"
+            id="phone"
+            name="phone"
+            maxlength="10"
+            placeholder="000 000 000"
+          />
+        </div>
+      </div>
+
+      <div id="keypad">
+        <button type="button" onclick="addDigit(1)">1</button>
+        <button type="button" onclick="addDigit(2)">2</button>
+        <button type="button" onclick="addDigit(3)">3</button>
+        <button type="button" onclick="addDigit(4)">4</button>
+        <button type="button" onclick="addDigit(5)">5</button>
+        <button type="button" onclick="addDigit(6)">6</button>
+        <button type="button" onclick="addDigit(7)">7</button>
+        <button type="button" onclick="addDigit(8)">8</button>
+        <button type="button" onclick="addDigit(9)">9</button>
+        <button type="button" onclick="addDigit(0)">0</button>
+        <button type="button" onclick="deleteDigit()">←</button>
+      </div>
+
+      <!-- Поля вибору дати і часу -->
+      <label for="day">Обрати день:</label>
+      <select id="day">
+        <option value="day1">Понеділок</option>
+        <option value="day2">Вівторок</option>
+        <option value="day3">Середа</option>
+      </select>
+
+      <label for="time">Обрати час:</label>
+      <select id="time">
+        <option value="10:00">10:00</option>
+        <option value="10:15">10:15</option>
+        <option value="10:30">10:30</option>
+        <option value="10:45">10:45</option>
+        <option value="11:00">11:00</option>
+        <!-- Додайте всі доступні проміжки -->
+        <option value="18:45">18:45</option>
+        <option value="19:00">19:00</option>
+      </select>
+
+      <!-- Кнопка надсилання -->
+      <button id="submit" onclick="submitForm()">Чекаю на дзвінок</button>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

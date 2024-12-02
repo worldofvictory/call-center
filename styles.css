@@ -1,0 +1,101 @@
+.title {
+  font-size: 24px;
+  color: white;
+}
+
+.call-center-status {
+  width: 300px;
+  height: auto;
+  margin: 20px auto;
+  text-align: center;
+  padding: 20px;
+  border: 1px solid #170321;
+  background: linear-gradient(135deg, #c933d1, #170321);
+}
+.call {
+  font-size: 16px;
+  color: white;
+}
+/*#phone-input {
+  margin: 10px 0;
+}*/
+.phone-container {
+  width: 100%;
+  margin-bottom: 20px;
+  height: 100%;
+}
+
+.phone-label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.phone-input-wrapper {
+  display: flex;
+  align-items: center; /* Вирівнюємо елементи по вертикалі */
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px; /* Закруглені кути для всього блоку */
+  background-color: #f9f9f9; /* Фон для поля вводу */
+}
+
+.country-wrapper {
+  display: flex;
+  align-items: center; /* Вирівнюємо елементи по вертикалі всередині цього контейнера */
+}
+
+.country-select {
+  padding: 10px;
+  font-size: 16px;
+  width: 120px; /* Ширина для списку вибору країни */
+  border: none;
+  background-color: transparent; /* Без фону для інтеграції в поле */
+  height: 100%; /* Встановлюємо висоту, щоб вона співпадала з висотою поля вводу */
+  box-sizing: border-box;
+}
+
+#phone {
+  padding: 10px;
+  font-size: 16px;
+  flex-grow: 1; /* Поле для номера займає всю залишкову ширину */
+  border: none; /* Без бордера, щоб не було додаткових ліній */
+  background-color: transparent; /* Фон поля для вводу */
+  height: 100%; /* Поле для вводу номера займає всю висоту контейнера */
+  box-sizing: border-box; /* Враховує padding в межах висоти */
+}
+
+/* Стилі для прапорів */
+.country-option {
+  display: flex;
+  align-items: center;
+}
+
+.flag-icon {
+  margin-right: 8px; /* Відступ між прапором та кодом */
+}
+
+#phone::placeholder {
+  color: #aaa;
+  align-items: center; /* Можна змінити колір тексту placeholder */
+}
+
+#keypad {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+}
+
+#keypad button {
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#phone {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  text-align: center;
+}
